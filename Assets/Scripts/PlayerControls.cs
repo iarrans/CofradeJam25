@@ -11,7 +11,7 @@ public class PlayerControls : MonoBehaviour
     public float maxForce;
     public bool isPlaying = false;
     public ControlSituations currentStatus = ControlSituations.NORMAL;
-    public float controlDuration = 10;
+    public float controlDuration = 5;
     public int currentState = 0;
     public int currentRound = 0;
 
@@ -34,6 +34,7 @@ public class PlayerControls : MonoBehaviour
     {
         isPlaying = true;
         StartCoroutine(ControlsChanger());
+        EnemiesController.Instance.StartSpawner();
     }
 
     public void OnMove(InputAction.CallbackContext context)

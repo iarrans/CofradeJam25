@@ -1,13 +1,22 @@
+using JetBrains.Annotations;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class EnemiesController : MonoBehaviour
 {
     public List<GameObject> spawners;
+    public GameObject enemyPrefab;
+
     public float minTimeBetweenSpawns;
     public float maxTimeBetweenSpawns;
+    public float minDegreeDeviation;
+    public float maxDegreeDeviation;
+    public float maxUnitsDeviation;
+    public float minEnemies;
+    public float maxEnemies;
 
     public static EnemiesController Instance;
 
@@ -28,13 +37,24 @@ public class EnemiesController : MonoBehaviour
         while (PlayerControls.Instance.isPlaying)
         {
             float newWaitingTime = UnityEngine.Random.Range(minTimeBetweenSpawns, maxTimeBetweenSpawns);
+           
+            float numberOfEnemies = UnityEngine.Random.Range(minEnemies, maxEnemies);
+            while (numberOfEnemies > 0)
+            {
+                SpawnEnemy();
+                numberOfEnemies--;
+            }
             yield return new WaitForSeconds(newWaitingTime);
-            SpawnEnemy();
         }
     }
 
     public void SpawnEnemy()
     {
-        Debug.Log("SpawnsEnemy");
+        int chosenSpawnerID = UnityEngine.Random.Range(0, spawners.Count);
+        GameObject enemy = Instantiate(enemyPrefab, spawners[chosenSpawnerID].transform);
+        enemy.transform.position = spawners[chosenSpawnerID].transform.position;
+        enemy.transform.rotation = spawners[chosenSpawnerID].transform.rotation;
+        enemy.SetActive(true);
     }
 }
+

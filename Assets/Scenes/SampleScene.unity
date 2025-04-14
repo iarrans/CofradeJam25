@@ -776,6 +776,11 @@ Transform:
   - {fileID: 424924088}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &754512491 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3867780840542133015, guid: a8aa53a9e94261044b210e2a0e3a375a, type: 3}
+  m_PrefabInstance: {fileID: 965716809}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &954892194
 GameObject:
   m_ObjectHideFlags: 0
@@ -907,9 +912,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -6181068524996119399, guid: a8aa53a9e94261044b210e2a0e3a375a, type: 3}
+      propertyPath: enemySpeed
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 3867780840542133015, guid: a8aa53a9e94261044b210e2a0e3a375a, type: 3}
       propertyPath: m_Name
       value: BasicEnemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 3867780840542133015, guid: a8aa53a9e94261044b210e2a0e3a375a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4561198322132554014, guid: a8aa53a9e94261044b210e2a0e3a375a, type: 3}
       propertyPath: m_IsTrigger
@@ -1334,6 +1347,63 @@ Transform:
   - {fileID: 355116925}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1593177419
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1593177421}
+  - component: {fileID: 1593177420}
+  m_Layer: 0
+  m_Name: EnemiesController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1593177420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1593177419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b0d60b2821f27b4f843c77f9ac90bbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawners:
+  - {fileID: 651254990}
+  - {fileID: 1443323406}
+  - {fileID: 954892194}
+  - {fileID: 424924087}
+  enemyPrefab: {fileID: 754512491}
+  minTimeBetweenSpawns: 2
+  maxTimeBetweenSpawns: 4
+  minDegreeDeviation: 0
+  maxDegreeDeviation: 45
+  maxUnitsDeviation: 3
+  minEnemies: 1
+  maxEnemies: 4
+--- !u!4 &1593177421
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1593177419}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.272184, y: -3.0855832, z: -2.1388714}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1738860863
 GameObject:
   m_ObjectHideFlags: 0
@@ -1553,6 +1623,14 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2053666700242017573, guid: 1027a98a7d99a7944af4ec87aa881357, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2053666700242017573, guid: 1027a98a7d99a7944af4ec87aa881357, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2053666700242017573, guid: 1027a98a7d99a7944af4ec87aa881357, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -1596,6 +1674,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 6859252569396924527, guid: 1027a98a7d99a7944af4ec87aa881357, type: 3}
+      propertyPath: controlDuration
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1614,3 +1696,4 @@ SceneRoots:
   - {fileID: 1297701266}
   - {fileID: 965716809}
   - {fileID: 707961315}
+  - {fileID: 1593177421}
