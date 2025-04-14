@@ -1,18 +1,40 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemiesController : MonoBehaviour
 {
+    public List<GameObject> spawners;
+    public float minTimeBetweenSpawns;
+    public float maxTimeBetweenSpawns;
+
+    public static EnemiesController Instance;
+
     // Start is called before the first frame update
-    void Start()
+
+    private void Awake()
     {
-        
+        Instance = this;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void StartSpawner()
     {
-        
+        StartCoroutine(EnemySpawner());
+    }
+
+    public IEnumerator EnemySpawner()
+    {
+        while (PlayerControls.Instance.isPlaying)
+        {
+            float newWaitingTime = UnityEngine.Random.Range(minTimeBetweenSpawns, maxTimeBetweenSpawns);
+            yield return new WaitForSeconds(newWaitingTime);
+            SpawnEnemy();
+        }
+    }
+
+    public void SpawnEnemy()
+    {
+        Debug.Log("SpawnsEnemy");
     }
 }
