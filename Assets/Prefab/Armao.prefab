@@ -10,15 +10,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: a63abb6347314bd4a8d1831a267a3d25, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -10.560545
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a63abb6347314bd4a8d1831a267a3d25, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.567
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a63abb6347314bd4a8d1831a267a3d25, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 14.234474
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a63abb6347314bd4a8d1831a267a3d25, type: 3}
       propertyPath: m_LocalRotation.w
@@ -51,6 +51,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: a63abb6347314bd4a8d1831a267a3d25, type: 3}
       propertyPath: m_Name
       value: Armao
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a63abb6347314bd4a8d1831a267a3d25, type: 3}
+      propertyPath: m_TagString
+      value: enemy
       objectReference: {fileID: 0}
     - target: {fileID: 5866666021909216657, guid: a63abb6347314bd4a8d1831a267a3d25, type: 3}
       propertyPath: m_Controller
