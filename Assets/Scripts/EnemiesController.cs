@@ -51,9 +51,11 @@ public class EnemiesController : MonoBehaviour
     public void SpawnEnemy()
     {
         int chosenSpawnerID = UnityEngine.Random.Range(0, spawners.Count);
-        GameObject enemy = Instantiate(enemyPrefab, spawners[chosenSpawnerID].transform);
-        enemy.transform.position = spawners[chosenSpawnerID].transform.position;
-        enemy.transform.rotation = spawners[chosenSpawnerID].transform.rotation;
+        Transform spawner = spawners[chosenSpawnerID].transform;
+        GameObject enemy = Instantiate(enemyPrefab, spawner);
+        enemy.transform.position = spawner.position;
+        enemy.transform.rotation = spawner.rotation;
+        enemy.GetComponent<EnemyBehaviour>().enemyDirection = spawner.GetComponent<SpawnerProperties>().enemyDirection;
         enemy.SetActive(true);
     }
 }

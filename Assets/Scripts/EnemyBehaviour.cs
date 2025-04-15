@@ -11,8 +11,9 @@ public class EnemyBehaviour : MonoBehaviour
     public Vector3 enemyDirection;
 
     private void Update()
-    {
-        transform.Translate(transform.forward * Time.deltaTime * enemySpeed);
+    {                           
+                            //enemyDirection
+        transform.Translate(enemyDirection * Time.deltaTime * enemySpeed);
         enemyTimer += Time.deltaTime;
         if (enemyTimer > enemyTotalLife)
         {
