@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 7f6e09bed1b52514e8216cbf382198dd
+guid: abceaf91dc46c6f4bb51a6e58f4e21bf
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -9,7 +9,7 @@ TrueTypeFontImporter:
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - Magic School One
+  - Augusta
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0
