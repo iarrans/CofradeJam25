@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4561198322132554014}
   - component: {fileID: -6181068524996119399}
   m_Layer: 0
-  m_Name: BasicEnemy3
+  m_Name: BasicEnemy4
   m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -120,6 +120,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyTimer: 0
   enemyTotalLife: 30
-  enemySpeed: 10
+  enemySpeed: 20
   enemyDirection: {x: 0, y: 0, z: 0}
-  spawnerType: 2
+  spawnerType: 0

@@ -16,13 +16,7 @@ public class EnemiesController : MonoBehaviour
     public List<GameObject> CornerSpawners;
     public GameObject enemyPrefab;
 
-    public float minTimeBetweenSpawns;
-    public float maxTimeBetweenSpawns;
-    public float minDegreeDeviation;
-    public float maxDegreeDeviation;
-    public float maxUnitsDeviation;
-    public float minEnemies;
-    public float maxEnemies;
+    public Quaternion enemyRotation;
 
     public static EnemiesController Instance;
 
@@ -42,44 +36,71 @@ public class EnemiesController : MonoBehaviour
     {
         while (PlayerControls.Instance.isPlaying)
         {
-            float newWaitingTime = UnityEngine.Random.Range(minTimeBetweenSpawns, maxTimeBetweenSpawns);
+            Debug.Log("New spawn round " + PlayerControls.Instance.currentRound);
+            List<GameObject> possibleEnemies = new List<GameObject>();
+            int roundIndex = PlayerControls.Instance.currentRound;
+            RoundData round;
+            if (rounds.Count - 1 > roundIndex)
+            {
+                round = rounds[roundIndex];
+                possibleEnemies = round.possibleEnemies;
+            }
+            else
+            {
+                round = rounds[rounds.Count - 1];
+                possibleEnemies = round.possibleEnemies;
+            }
            
-            float numberOfEnemies = UnityEngine.Random.Range(minEnemies, maxEnemies);
+            float numberOfEnemies = UnityEngine.Random.Range(round.minEnemiesPerSpawn, round.maxEnemiesPerSpawn);
             while (numberOfEnemies > 0)
             {
-                SpawnEnemy();
+                SpawnEnemy(possibleEnemies);
                 numberOfEnemies--;
             }
-            yield return new WaitForSeconds(newWaitingTime);
+            yield return new WaitForSeconds(round.timeBetweenSpawns);
         }
     }
 
-    public void SpawnEnemy()
+    public void SpawnEnemy(List<GameObject> possibleEnemies)//añadir como parámetro de entrada posibles enemigos
     {
-        int chosenSpawnerID = UnityEngine.Random.Range(0, spawners.Count);
-        Transform spawner = spawners[chosenSpawnerID].transform;
-        SpawnerProperties spawnProps = spawner.GetComponent<SpawnerProperties>();
-        float deviation = UnityEngine.Random.Range(-spawnProps.spawnerRange, spawnProps.spawnerRange);
+        int chosenEnemyID = UnityEngine.Random.Range(0, possibleEnemies.Count);
+        EnemyBehaviour enemyBehaviour = possibleEnemies[chosenEnemyID].GetComponent<EnemyBehaviour>();
+        Transform spawner;
 
-        GameObject enemy = Instantiate(enemyPrefab, spawner);
-        switch (spawnProps.spawnerType)
+        GameObject enemy = Instantiate(enemyBehaviour.transform.gameObject);
+        int chosenSpawnerID = 0;
+        float deviation = 0;
+        SpawnerProperties spawnProps;
+
+        if (enemyBehaviour.spawnerType == SpawnerType.HORIZONTAL)
         {
-            case SpawnerType.HORIZONTAL:
-                enemy.transform.position = spawner.position + Vector3.right * deviation;
-                break;
-            case SpawnerType.VERTICAL:
-                enemy.transform.position = spawner.position + new Vector3(0,0,1) * deviation;
-                break;
-            case SpawnerType.CORNER:
-                enemy.transform.position = spawner.position;
-                break;
-            default:
-                // code block
-                enemy.transform.position = spawner.position;
-                break;
+            chosenSpawnerID = UnityEngine.Random.Range(0, TopBottomSpawners.Count);
+            spawner = TopBottomSpawners[chosenSpawnerID].transform;
+            spawnProps = spawner.GetComponent<SpawnerProperties>();
+            deviation = UnityEngine.Random.Range(-spawnProps.spawnerRange, spawnProps.spawnerRange);
+            enemy.transform.position = spawner.position + Vector3.right * deviation;
+
+        } else if (enemyBehaviour.spawnerType == SpawnerType.VERTICAL) {
+
+            chosenSpawnerID = UnityEngine.Random.Range(0, SideSpawners.Count);
+            spawner = SideSpawners[chosenSpawnerID].transform;
+            spawnProps = spawner.GetComponent<SpawnerProperties>();
+            deviation = UnityEngine.Random.Range(-spawnProps.spawnerRange, spawnProps.spawnerRange);
+            enemy.transform.position = spawner.position + new Vector3(0, 0, 1) * deviation;
+
+        }
+        else
+        {
+            chosenSpawnerID = UnityEngine.Random.Range(0, CornerSpawners.Count);
+            spawner = CornerSpawners[chosenSpawnerID].transform;
+            spawnProps = spawner.GetComponent<SpawnerProperties>();
+            enemy.transform.position = spawner.position;
+
         }
         enemy.transform.rotation = spawner.rotation;
         enemy.GetComponent<EnemyBehaviour>().enemyDirection = spawnProps.enemyDirection;
+        enemy.transform.rotation = spawner.rotation;
+        enemy.transform.parent = spawner;
         enemy.SetActive(true);
     }
 }

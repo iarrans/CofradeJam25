@@ -15,6 +15,7 @@ MonoBehaviour:
   possibleEnemies:
   - {fileID: 3867780840542133015, guid: a8aa53a9e94261044b210e2a0e3a375a, type: 3}
   - {fileID: 3867780840542133015, guid: b708d0101d4bc9b4091703dbe37fd1bc, type: 3}
+  - {fileID: 3867780840542133015, guid: 37485a2ed2066214f8e51012dd8c7fc9, type: 3}
   enemySpeedBoost: 0
   timeBetweenSpawns: 4
   minEnemiesPerSpawn: 1
