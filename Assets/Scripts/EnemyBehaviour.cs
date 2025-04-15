@@ -9,6 +9,7 @@ public class EnemyBehaviour : MonoBehaviour
     public float enemyTotalLife;
     public float enemySpeed;
     public Vector3 enemyDirection;
+    public SpawnerType spawnerType;
 
     private void Update()
     {                           

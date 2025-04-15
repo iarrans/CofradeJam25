@@ -8,7 +8,12 @@ using UnityEngine.InputSystem.LowLevel;
 
 public class EnemiesController : MonoBehaviour
 {
+    public List<RoundData> rounds;
+
     public List<GameObject> spawners;
+    public List<GameObject> TopBottomSpawners;
+    public List<GameObject> SideSpawners;
+    public List<GameObject> CornerSpawners;
     public GameObject enemyPrefab;
 
     public float minTimeBetweenSpawns;

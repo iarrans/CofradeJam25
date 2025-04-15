@@ -1689,13 +1689,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b0d60b2821f27b4f843c77f9ac90bbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rounds:
+  - {fileID: 11400000, guid: f73172eb7e816e34e9dcac7c07da612c, type: 2}
   spawners:
   - {fileID: 651254990}
+  - {fileID: 101518766}
+  - {fileID: 1124611583}
   - {fileID: 1443323406}
   - {fileID: 954892194}
   - {fileID: 424924087}
-  - {fileID: 101518766}
+  - {fileID: 1517667083}
+  - {fileID: 1192313714}
+  TopBottomSpawners:
+  - {fileID: 651254990}
+  - {fileID: 424924087}
+  SideSpawners:
+  - {fileID: 954892194}
+  - {fileID: 1443323406}
+  CornerSpawners:
   - {fileID: 1124611583}
+  - {fileID: 101518766}
   - {fileID: 1517667083}
   - {fileID: 1192313714}
   enemyPrefab: {fileID: 754512491}
