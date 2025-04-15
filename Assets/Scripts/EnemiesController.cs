@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.InputSystem.LowLevel;
 
 public class EnemiesController : MonoBehaviour
 {
@@ -52,10 +53,28 @@ public class EnemiesController : MonoBehaviour
     {
         int chosenSpawnerID = UnityEngine.Random.Range(0, spawners.Count);
         Transform spawner = spawners[chosenSpawnerID].transform;
+        SpawnerProperties spawnProps = spawner.GetComponent<SpawnerProperties>();
+        float deviation = UnityEngine.Random.Range(-spawnProps.spawnerRange, spawnProps.spawnerRange);
+
         GameObject enemy = Instantiate(enemyPrefab, spawner);
-        enemy.transform.position = spawner.position;
+        switch (spawnProps.spawnerType)
+        {
+            case SpawnerType.HORIZONTAL:
+                enemy.transform.position = spawner.position + Vector3.right * deviation;
+                break;
+            case SpawnerType.VERTICAL:
+                enemy.transform.position = spawner.position + new Vector3(0,0,1) * deviation;
+                break;
+            case SpawnerType.CORNER:
+                enemy.transform.position = spawner.position;
+                break;
+            default:
+                // code block
+                enemy.transform.position = spawner.position;
+                break;
+        }
         enemy.transform.rotation = spawner.rotation;
-        enemy.GetComponent<EnemyBehaviour>().enemyDirection = spawner.GetComponent<SpawnerProperties>().enemyDirection;
+        enemy.GetComponent<EnemyBehaviour>().enemyDirection = spawnProps.enemyDirection;
         enemy.SetActive(true);
     }
 }
