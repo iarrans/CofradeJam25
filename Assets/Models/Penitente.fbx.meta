@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: bfcc4b4bc45754e48bf157bc7e86f356
+guid: 64f15f5f7bb92284db500558b0cd8910
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -8,52 +8,52 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Madera
-    second: {fileID: 2100000, guid: 501d8ce105c06474c89d232988a84976, type: 2}
+    second: {fileID: 2100000, guid: 72e840896aae4784a9acefc64aad5db7, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Negro
-    second: {fileID: 2100000, guid: 5e471b5bf573a324e8b697ab878e4ba8, type: 2}
+    second: {fileID: 2100000, guid: f3234ab1840fc3840a665c7d78c0f849, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Skin
-    second: {fileID: 2100000, guid: 39e08f03448d72045b23641c07531855, type: 2}
+    second: {fileID: 2100000, guid: d55b0babea46d5347832c4d9f59ec502, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Difusse_Color_Map
+    second: {fileID: 2800000, guid: 3800f272ae34648428111bb6cc6b4448, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Hair_Alpha
-    second: {fileID: 2800000, guid: 01e8923af235a83439ec53a2d105f749, type: 3}
+    second: {fileID: 2800000, guid: 86efa66a41457734298804c8be1e0535, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Hair_BaseColor
-    second: {fileID: 2800000, guid: 3034b80cc2c6d5d4ab265cd9bb05e7b1, type: 3}
+    second: {fileID: 2800000, guid: 598cd08ad47b32d42a30418eb519de78, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Hair_Emission
-    second: {fileID: 2800000, guid: 7bbdd4a4e08ae38439bc7de8814b779e, type: 3}
+    second: {fileID: 2800000, guid: 94e1aaf0e9a770548bf6edbc0c4e694e, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Hair_Metallic
-    second: {fileID: 2800000, guid: 748d52dabb4d91c4a9bafb91e29f5364, type: 3}
+    second: {fileID: 2800000, guid: c425e879b445b74498e9eb4ac04142e1, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Hair_Normal
-    second: {fileID: 2800000, guid: 09d156f946f95cd4da53006c2792a0c6, type: 3}
+    second: {fileID: 2800000, guid: 4dbf6ca0bb5b4974085b3212dfe4f04c, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Hair_Roughness
-    second: {fileID: 2800000, guid: d418993c4669f0c429c0ec8e6872f3db, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: Penitente_BaseColor
-    second: {fileID: 2800000, guid: d5f9a40acbbb30d42ad2060ffa049b31, type: 3}
+    second: {fileID: 2800000, guid: 61756f43a4a73264c8d5c012ac062fea, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -83,7 +83,7 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: walking prenitente
+      name: Walking Penitente
       takeName: Armature.002|ArmatureAction.002
       internalID: -664916953551355124
       firstFrame: 0
