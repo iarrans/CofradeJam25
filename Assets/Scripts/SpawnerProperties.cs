@@ -8,7 +8,7 @@ public class SpawnerProperties : MonoBehaviour
     public Vector3 enemyDirection;
     public float spawnerRange;//cantidad de unidades que puede desplazarse a ambos lados ¿O marco los límites?
     public SpawnerType spawnerType;
-
+    public float rotationYDegrees = 0;
 }
 
 public enum SpawnerType

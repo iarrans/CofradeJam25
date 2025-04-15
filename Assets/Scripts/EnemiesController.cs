@@ -98,6 +98,7 @@ public class EnemiesController : MonoBehaviour
 
         }
         enemy.transform.rotation = spawner.rotation;
+        enemy.transform.GetChild(0).transform.rotation = Quaternion.Euler(enemy.transform.GetChild(0).transform.rotation.eulerAngles + new Vector3(0,spawnProps.rotationYDegrees,0));
         enemy.GetComponent<EnemyBehaviour>().enemyDirection = spawnProps.enemyDirection;
         enemy.transform.rotation = spawner.rotation;
         enemy.transform.parent = spawner;

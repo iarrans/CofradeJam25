@@ -75,7 +75,6 @@ public class PlayerControls : MonoBehaviour
                 break;
         }
 
-
         targetVelocity *= speed;
 
         //Dieccion
