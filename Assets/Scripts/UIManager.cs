@@ -11,6 +11,7 @@ public class UIManager : MonoBehaviour
     
     public TextMeshProUGUI rounds;
     public TextMeshProUGUI currentState;
+    public TextMeshProUGUI lives;
 
     private void Awake()
     {

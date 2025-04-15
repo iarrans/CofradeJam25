@@ -4,13 +4,30 @@ using UnityEngine;
 
 public class PlayerCollissions : MonoBehaviour
 {
+    public int lives = 3;
+
+    private void Start()
+    {
+        UIManager.Instance.lives.text = "Lives: " + lives;
+    }
+
+
     // Start is called before the first frame update
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "enemy")
+        if (other.tag == "enemy" && PlayerControls.Instance.isPlaying)
         {
-            PlayerControls.Instance.isPlaying = false;
-            UIManager.Instance.GameOver();
+            lives--;
+            if (lives == 0)
+            {
+                PlayerControls.Instance.isPlaying = false;
+                UIManager.Instance.GameOver();
+                UIManager.Instance.lives.text = "Game Over";
+            }
+            else
+            {
+                UIManager.Instance.lives.text = "Lives: " + lives;
+            }         
         }
     }
 }
