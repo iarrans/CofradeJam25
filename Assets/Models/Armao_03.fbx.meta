@@ -1,0 +1,253 @@
+fileFormatVersion: 2
+guid: a63abb6347314bd4a8d1831a267a3d25
+ModelImporter:
+  serializedVersion: 22200
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Armao
+    second: {fileID: 2100000, guid: cea574024d4517f45b80ef071c67c702, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Armao_BaseColor
+    second: {fileID: 2800000, guid: a1513ea65939cc1439ed812b41b494bf, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Armao_Metalness
+    second: {fileID: 2800000, guid: a2a0e09480701a545a2cc84ace78a0df, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Armao_Roughness
+    second: {fileID: 2800000, guid: 76747914da4322b458e0ba1481d7b5d2, type: 3}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Walking
+      takeName: Armature|ArmatureAction
+      internalID: 4781951162920444690
+      firstFrame: 0
+      lastFrame: 30
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 5
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importPhysicalCameras: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    strictVertexDataChecks: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton:
+    - name: Armao_03(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Armature
+      parentName: Armao_03(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 100, y: 100, z: 100}
+    - name: Bone
+      parentName: Armature
+      position: {x: -0, y: 0.000029700823, z: 0}
+      rotation: {x: -0.12747857, y: 1.4152964e-17, z: -1.10116507e-16, w: 0.9918413}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Bone.001
+      parentName: Bone
+      position: {x: 0.0000024527317, y: 3.35276e-11, z: 0.000214614}
+      rotation: {x: 0.7071068, y: 7.850464e-17, z: 7.850463e-17, w: 0.7071067}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Arm_01_L
+      parentName: Bone.001
+      position: {x: -0.00009404079, y: 0.00014042499, z: -1.1175868e-11}
+      rotation: {x: -0.10709469, y: 0.46212393, z: 0.8575971, w: 0.19874457}
+      scale: {x: 0.99999994, y: 0.99999994, z: 0.9999999}
+    - name: Arm_02_l
+      parentName: Arm_01_L
+      position: {x: 1.0244546e-11, y: 0.00009964635, z: -1.0889347e-12}
+      rotation: {x: 0.48443362, y: 0.23649521, z: 0.0010916896, w: 0.84225464}
+      scale: {x: 0.99999994, y: 1, z: 1}
+    - name: Arm_02_l_end
+      parentName: Arm_02_l
+      position: {x: -0, y: 0.00008092397, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Arm_01_R
+      parentName: Bone.001
+      position: {x: 0.00009439467, y: 0.00014042499, z: -1.1175868e-11}
+      rotation: {x: -0.101481505, y: -0.31229806, z: 0.8983109, w: -0.2919057}
+      scale: {x: 1, y: 1, z: 0.99999994}
+    - name: Arm_02_r
+      parentName: Arm_01_R
+      position: {x: -1.1175868e-11, y: 0.000094388524, z: 1.153475e-11}
+      rotation: {x: -0.090232044, y: 0.0652958, z: -0.0019432905, w: 0.9937761}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Arm_02_r_end
+      parentName: Arm_02_r
+      position: {x: -0, y: 0.00008092397, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Bone.002
+      parentName: Bone.001
+      position: {x: 2.328306e-13, y: 0.00019463486, z: -3.7252896e-12}
+      rotation: {x: -0.06599977, y: 0.009279298, z: 0.0018435156, w: 0.9977748}
+      scale: {x: 1, y: 0.9999999, z: 0.99999994}
+    - name: Bone.002_end
+      parentName: Bone.002
+      position: {x: -0, y: 0.0003519669, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: lEG_01_l
+      parentName: Bone.001
+      position: {x: -0.000054842876, y: -0.000026095837, z: 0.0000036929168}
+      rotation: {x: 0.018508084, y: -0.3279344, z: 0.943105, w: 0.05166652}
+      scale: {x: 1.0000362, y: 1, z: 0.9999999}
+    - name: Leg_02_L
+      parentName: lEG_01_l
+      position: {x: -0, y: 0.000095292955, z: -4.6493356e-12}
+      rotation: {x: 0.13093017, y: -0.020080363, z: 0.03165745, w: 0.99068254}
+      scale: {x: 1.0000001, y: 1.0000002, z: 0.99999994}
+    - name: Leg_02_L_end
+      parentName: Leg_02_L
+      position: {x: -0, y: 0.00009207594, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: lEG_01_r
+      parentName: Bone.001
+      position: {x: 0.00004989751, y: -0.0000012046934, z: -3.7252896e-12}
+      rotation: {x: 0.017099692, y: 0.31505492, z: 0.9475247, w: -0.051428426}
+      scale: {x: 1.000034, y: 1, z: 1}
+    - name: Leg_02_R
+      parentName: lEG_01_r
+      position: {x: 1.5716062e-11, y: 0.00009678665, z: -1.0155366e-11}
+      rotation: {x: 0.130913, y: 0.02019216, z: -0.03081213, w: 0.9907092}
+      scale: {x: 1, y: 1.0000001, z: 1}
+    - name: Leg_02_R_end
+      parentName: Leg_02_R
+      position: {x: -0, y: 0.00009207594, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Soldado
+      parentName: Armao_03(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.000000081460335, y: 0, z: -0, w: 1}
+      scale: {x: 100, y: 100, z: 100}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 0.049999997
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  importBlendShapeDeformPercent: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
