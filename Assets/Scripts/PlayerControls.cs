@@ -6,6 +6,7 @@ using UnityEngine.InputSystem;
 public class PlayerControls : MonoBehaviour
 {
     Rigidbody rb;
+    public Animator anim;
     public float speed, senstivity;
     public Vector2 move;
     public float maxForce;
@@ -22,6 +23,7 @@ public class PlayerControls : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
+        anim = GetComponent<Animator>();
         Instance = this;
     }
 
@@ -56,19 +58,27 @@ public class PlayerControls : MonoBehaviour
         switch (currentState)
         {
             case 0:
-                // NORMAL
+                // NORMALS
+                anim.SetFloat("X", move.x);
+                anim.SetFloat("Y", move.y);
                 break;
             case 1:
                 // PLUS90 - I DELANTE D ATRAS
                 targetVelocity = new Vector3(-move.y, 0, -move.x);
+                anim.SetFloat("X", -move.y);
+                anim.SetFloat("Y", -move.x);
                 break;
             case 2:
                 // MIRRORED
                 targetVelocity = new Vector3(- move.x, 0, - move.y);
+                anim.SetFloat("X", -move.x);
+                anim.SetFloat("Y", -move.y);
                 break;
             case 3:
                 // MINUS90
                 targetVelocity = new Vector3(move.y, 0, move.x);
+                anim.SetFloat("X", move.y);
+                anim.SetFloat("Y", move.x);
                 break;
             default:
                 // code block
@@ -113,9 +123,6 @@ public class PlayerControls : MonoBehaviour
         currentState = 0;
         currentRound++;
     }
-
-
-
 }
 
 public enum ControlSituations{

@@ -21,6 +21,7 @@ public class PlayerCollissions : MonoBehaviour
             if (lives == 0)
             {
                 PlayerControls.Instance.isPlaying = false;
+                PlayerControls.Instance.anim.SetBool("isDead", true);
                 UIManager.Instance.GameOver();
                 UIManager.Instance.lives.text = "Game Over";
             }
