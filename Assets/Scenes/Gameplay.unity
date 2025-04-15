@@ -1627,6 +1627,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f73172eb7e816e34e9dcac7c07da612c, type: 2}
   - {fileID: 11400000, guid: 9efc58080245dc049b54526de03ca361, type: 2}
   - {fileID: 11400000, guid: c28cea9fd0d152549ae31c1411e236de, type: 2}
+  - {fileID: 11400000, guid: 52b2b1079467c184bb4fa88352aca754, type: 2}
+  - {fileID: 11400000, guid: f55edf8ffe3ed3e49916407892332eb8, type: 2}
+  - {fileID: 11400000, guid: 75215949eab7e76488645df0a2fb8241, type: 2}
+  - {fileID: 11400000, guid: b4595d212b5efc644a3a839fd62ddb08, type: 2}
   spawners:
   - {fileID: 651254990}
   - {fileID: 101518766}

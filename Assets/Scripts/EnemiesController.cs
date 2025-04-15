@@ -54,14 +54,14 @@ public class EnemiesController : MonoBehaviour
             float numberOfEnemies = UnityEngine.Random.Range(round.minEnemiesPerSpawn, round.maxEnemiesPerSpawn);
             while (numberOfEnemies > 0)
             {
-                SpawnEnemy(possibleEnemies);
+                SpawnEnemy(possibleEnemies, round);
                 numberOfEnemies--;
             }
             yield return new WaitForSeconds(round.timeBetweenSpawns);
         }
     }
 
-    public void SpawnEnemy(List<GameObject> possibleEnemies)//añadir como parámetro de entrada posibles enemigos
+    public void SpawnEnemy(List<GameObject> possibleEnemies, RoundData round)//añadir como parámetro de entrada posibles enemigos
     {
         int chosenEnemyID = UnityEngine.Random.Range(0, possibleEnemies.Count);
         EnemyBehaviour enemyBehaviour = possibleEnemies[chosenEnemyID].GetComponent<EnemyBehaviour>();
@@ -100,6 +100,7 @@ public class EnemiesController : MonoBehaviour
         enemy.transform.rotation = spawner.rotation;
         enemy.transform.GetChild(0).transform.rotation = Quaternion.Euler(enemy.transform.GetChild(0).transform.rotation.eulerAngles + new Vector3(0,spawnProps.rotationYDegrees,0));
         enemy.GetComponent<EnemyBehaviour>().enemyDirection = spawnProps.enemyDirection;
+        enemy.GetComponent<EnemyBehaviour>().enemySpeed = enemyBehaviour.enemySpeed * round.enemySpeedBoost;
         enemy.transform.rotation = spawner.rotation;
         enemy.transform.parent = spawner;
         enemy.SetActive(true);

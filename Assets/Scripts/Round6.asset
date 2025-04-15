@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0b524ff41cc6e0d499c973c6506dcccd, type: 3}
-  m_Name: Round3
+  m_Name: Round6
   m_EditorClassIdentifier: 
   possibleEnemies:
   - {fileID: 984060126333607235, guid: c3982374a6a85244ea030f5433d7e61f, type: 3}
@@ -18,7 +18,7 @@ MonoBehaviour:
   - {fileID: 7320571476262183541, guid: 3e047a54235500e4a9c6f2f423f12207, type: 3}
   - {fileID: 287016504885082510, guid: ee9cd00ba825cb14495e63ebf3365c7d, type: 3}
   - {fileID: 3748554176504342713, guid: 505fc88d9e2689d45b1c96feb69d1004, type: 3}
-  enemySpeedBoost: 1.1
-  timeBetweenSpawns: 3.5
-  minEnemiesPerSpawn: 2
-  maxEnemiesPerSpawn: 3
+  enemySpeedBoost: 1.25
+  timeBetweenSpawns: 2.5
+  minEnemiesPerSpawn: 4
+  maxEnemiesPerSpawn: 5
