@@ -4,8 +4,14 @@ using UnityEngine;
 
 public class PlayerCollissions : MonoBehaviour
 {
-    public int lives = 3;
 
+    public int lives = 3;
+    public static PlayerCollissions Instance;
+
+    private void Awake()
+    {
+        Instance = this;
+    }
     private void Start()
     {
         UIManager.Instance.lives.text = "Lives: " + lives;
@@ -22,6 +28,7 @@ public class PlayerCollissions : MonoBehaviour
             {
                 PlayerControls.Instance.isPlaying = false;
                 PlayerControls.Instance.anim.SetBool("isDead", true);
+                PlayerControls.Instance.speed = 0;
                 UIManager.Instance.GameOver();
                 UIManager.Instance.lives.text = "Game Over";
             }

@@ -549,6 +549,21 @@ MonoBehaviour:
   rounds: {fileID: 697871949}
   currentState: {fileID: 1178265845}
   lives: {fileID: 1711126657}
+  menuPanel: {fileID: 0}
+  inGamePanel: {fileID: 0}
+  gameOverPanel: {fileID: 0}
+  creditsPanel: {fileID: 0}
+  howToPlayPanel: {fileID: 0}
+  timePlayed: {fileID: 0}
+  vignete: {fileID: 0}
+  currentKeyMode:
+  - {fileID: 21300000, guid: 162533ac118bb334785b9bd93967c76d, type: 3}
+  - {fileID: 21300000, guid: 26aa38d22de0e4e46994793e6c2b0b07, type: 3}
+  - {fileID: 21300000, guid: 30da7b08bca5f0642b76ee1cc6761daa, type: 3}
+  - {fileID: 21300000, guid: ee9c8a970514244408d63fbbe09bc925, type: 3}
+  keyboardInstructions: {fileID: 0}
+  linksIsa: 
+  linksCherry: https://cherryneira.carrd.co
 --- !u!1 &651254990
 GameObject:
   m_ObjectHideFlags: 0
