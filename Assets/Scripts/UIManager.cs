@@ -5,16 +5,12 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
-
     public static UIManager Instance;
     
-    public TextMeshProUGUI rounds;
-    public TextMeshProUGUI currentState;
-    public TextMeshProUGUI lives;
-
     [Header("Paneles")]
     public GameObject menuPanel;
     public GameObject inGamePanel;
@@ -23,47 +19,48 @@ public class UIManager : MonoBehaviour
     public GameObject howToPlayPanel;
 
     [Header("Variables de juego")]
-    public TextMeshProUGUI timePlayed;
     public Image vignete;
     public Sprite[] currentKeyMode;
     public Image keyboardInstructions;
 
     [Header("Links")]
-    public string linkIsa;
+    public string linkIsa = "https://isabel-arrans.itch.io/";
     public string linkCherry = "https://cherryneira.carrd.co";
     public string linkAlito = "https://linktr.ee/SrAlistoteles";
 
+    [Header("Temporizador")]
+    public TextMeshProUGUI timePlayedGOtxt;
+    public TextMeshProUGUI timePlayedIGtxt;
+    public float timePassed;
 
     private void Awake()
     {
         Instance = this;
-        rounds.text = "Nivel de ansiedad: 0 ";
-        currentState.text = "Control: normal";
+        menuPanel.SetActive(true);
+        MusicManager.instance.PlayBackgroundMusic(MusicManager.instance.musicMenu);
+        Time.timeScale = 0f;
+    }
 
+    private void Update()
+    {
+        Temporizador();
     }
 
     public void ChangeState(int newState)
     {
-
-        rounds.text = "Nivel de ansiedad " + PlayerControls.Instance.currentRound.ToString();
-
         switch (newState)
         {
             case 0:
-                currentState.text = "Control: normal";
                 //Activa los controles de la interfaz
                 keyboardInstructions.sprite = currentKeyMode[0];
                 break;
             case 1:
-                currentState.text = "Control: izq=alante. drcha=atrás";
                 keyboardInstructions.sprite = currentKeyMode[1];
                 break;
             case 2:
-                currentState.text = "Control: invertido";
                 keyboardInstructions.sprite = currentKeyMode[2];
                 break;
             case 3:
-                currentState.text = "Control: drcha=adelante, izq=atrás";
                 keyboardInstructions.sprite = currentKeyMode[3];
                 break;
             default:
@@ -121,10 +118,51 @@ public class UIManager : MonoBehaviour
         Application.OpenURL(linkAlito);
     }
     #endregion
+
+    #region("Game states")
+    public void StartGame()
+    {
+        ActivateInGamePanel(true);
+        Time.timeScale = 1f;
+        MusicManager.instance.PlayBackgroundMusic(MusicManager.instance.musicInGame);
+    }
     public void GameOver()
     {
+        Debug.Log("GameOver");
+        StartCoroutine(PanelesGameOver());
+    }
+    public void Retry()
+    {
+        SceneManager.LoadScene("Gameplay");
+    }
+    IEnumerator PanelesGameOver()
+    {
+        yield return new WaitForSeconds(1f);
         gameOverPanel.SetActive(true);
         inGamePanel.SetActive(false);
-        Debug.Log("GameOver");
     }
+
+    #endregion
+
+    public void Temporizador()
+    {
+        if (PlayerControls.Instance.isPlaying == true)
+        {
+            timePassed += Time.deltaTime;
+            int min = Math.Max(Mathf.FloorToInt(timePassed / 60), 0);
+            int sec = Math.Max(Mathf.FloorToInt(timePassed % 60), 0);
+
+            if (sec >= 10)
+            {
+                timePlayedGOtxt.text = min + ":" + sec;
+                timePlayedIGtxt.text = min + ":" + sec;
+            }
+            else
+            {
+                timePlayedGOtxt.text = min + ":" + 0 + sec;
+                timePlayedIGtxt.text = min + ":" + 0 + sec;
+            }
+        }
+    }
+    
 }

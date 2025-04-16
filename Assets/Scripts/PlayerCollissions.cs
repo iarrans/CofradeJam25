@@ -14,7 +14,7 @@ public class PlayerCollissions : MonoBehaviour
     }
     private void Start()
     {
-        UIManager.Instance.lives.text = "Lives: " + lives;
+
     }
 
 
@@ -31,12 +31,8 @@ public class PlayerCollissions : MonoBehaviour
                 PlayerControls.Instance.anim.SetBool("isDead", true);
                 PlayerControls.Instance.speed = 0;
                 UIManager.Instance.GameOver();
-                UIManager.Instance.lives.text = "Game Over";
-            }
-            else
-            {
-                UIManager.Instance.lives.text = "Lives: " + lives;
-            }         
+
+            }       
         }
     }
 }
