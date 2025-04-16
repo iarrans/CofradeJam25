@@ -24,6 +24,7 @@ public class PlayerCollissions : MonoBehaviour
         if (other.tag == "enemy" && PlayerControls.Instance.isPlaying)
         {
             lives--;
+            UIManager.Instance.SetVignete();
             if (lives == 0)
             {
                 PlayerControls.Instance.isPlaying = false;

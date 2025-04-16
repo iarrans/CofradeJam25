@@ -29,8 +29,9 @@ public class UIManager : MonoBehaviour
     public Image keyboardInstructions;
 
     [Header("Links")]
-    public string linksIsa;
-    public string linksCherry = "https://cherryneira.carrd.co";
+    public string linkIsa;
+    public string linkCherry = "https://cherryneira.carrd.co";
+    public string linkAlito = "https://linktr.ee/SrAlistoteles";
 
 
     private void Awake()
@@ -39,10 +40,6 @@ public class UIManager : MonoBehaviour
         rounds.text = "Nivel de ansiedad: 0 ";
         currentState.text = "Control: normal";
 
-    }
-    private void Update()
-    {
-        SetVignete();
     }
 
     public void ChangeState(int newState)
@@ -113,11 +110,15 @@ public class UIManager : MonoBehaviour
     #region("Button URL")
     public void OpenURLCherry()
     {
-        Application.OpenURL(linksCherry);
+        Application.OpenURL(linkCherry);
     }
     public void OpenURLIsa()
     {
-        Application.OpenURL(linksIsa);
+        Application.OpenURL(linkIsa);
+    }
+    public void OpenURLAlito()
+    {
+        Application.OpenURL(linkAlito);
     }
     #endregion
     public void GameOver()
