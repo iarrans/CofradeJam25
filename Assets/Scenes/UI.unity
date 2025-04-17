@@ -3782,15 +3782,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd5a46d20c49d6c429c67e86c3ad4773, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rounds: {fileID: 0}
-  currentState: {fileID: 0}
-  lives: {fileID: 0}
   menuPanel: {fileID: 867782479}
   inGamePanel: {fileID: 1182353551}
   gameOverPanel: {fileID: 1220270514}
   creditsPanel: {fileID: 416177671}
   howToPlayPanel: {fileID: 1637984927}
-  timePlayed: {fileID: 1584179484}
   vignete: {fileID: 484622638}
   currentKeyMode:
   - {fileID: 21300000, guid: 162533ac118bb334785b9bd93967c76d, type: 3}
@@ -3801,6 +3797,9 @@ MonoBehaviour:
   linkIsa: https://isabel-arrans.itch.io/
   linkCherry: https://cherryneira.carrd.co
   linkAlito: https://linktr.ee/SrAlistoteles
+  timePlayedGOtxt: {fileID: 0}
+  timePlayedIGtxt: {fileID: 0}
+  timePassed: 0
 --- !u!4 &1499466822
 Transform:
   m_ObjectHideFlags: 0
@@ -3873,7 +3872,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Reintentar
+  m_text: "Men\xFA principal"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4daf011d2ee2733479c505a81969961a, type: 2}
   m_sharedMaterial: {fileID: -7240795602528559737, guid: 4daf011d2ee2733479c505a81969961a, type: 2}

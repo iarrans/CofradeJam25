@@ -5211,9 +5211,9 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: -4471621236620699926, guid: 8092ee0628036fd459b077076398711c, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.669
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -5776,9 +5776,15 @@ MonoBehaviour:
   musicSource: {fileID: 1482349076}
   SFXSource: {fileID: 1630384918}
   musicInGame: {fileID: 8300000, guid: 61bd874a183c2fd4b8ee032f72863677, type: 3}
-  damageTerry: []
-  deathTerry: []
-  audiosCapataz: []
+  damageTerry:
+  - {fileID: 8300000, guid: 212e027ad58e9924abcaddc6fdd74c05, type: 3}
+  deathTerry:
+  - {fileID: 8300000, guid: 537d6d5f37b43514a9c6451a146fc3c5, type: 3}
+  audiosCapataz:
+  - {fileID: 8300000, guid: 3f71ea3246b24014b9a7b583129b3946, type: 3}
+  - {fileID: 8300000, guid: 0d4fb78dba8448b48991c0b251c3cf03, type: 3}
+  - {fileID: 8300000, guid: 81801e3e5ba9d1749a8877e3c9d6ab92, type: 3}
+  - {fileID: 8300000, guid: 4c33f6acec6e6c3409d2706cac0d8d2d, type: 3}
   audiosNazarenos: []
   audiosPenitentes: []
   audiosGuiriChico: []

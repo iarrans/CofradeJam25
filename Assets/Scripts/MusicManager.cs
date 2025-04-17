@@ -1,6 +1,8 @@
+using Mono.Reflection;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Reflection;
 using UnityEngine;
 using UnityEngine.Audio;
 using Random = UnityEngine.Random;
@@ -41,5 +43,20 @@ public class MusicManager : MonoBehaviour
     {
         int index = Random.Range(0, clip.Length);
         SFXSource.PlayOneShot(clip[index]);
+    }
+
+    public void PlayCapataz(int instruction)
+    {
+        SFXSource.PlayOneShot(audiosCapataz[instruction]);
+    }
+
+    public void TerryDamage()
+    {
+        PlaySFX(damageTerry);
+    }
+
+    public void TerryDeath()
+    {
+        PlaySFX(deathTerry);
     }
 }

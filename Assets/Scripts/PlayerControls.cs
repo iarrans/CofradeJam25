@@ -109,10 +109,12 @@ public class PlayerControls : MonoBehaviour
             if (currentState == 3)
             {
                 UpdateRound();
+                MusicManager.instance.PlayCapataz(currentState);
             }
             else
             {
                 currentState++;
+                MusicManager.instance.PlayCapataz(currentState);
             }
             UIManager.Instance.ChangeState(currentState);
             Debug.Log("ControlChange");
