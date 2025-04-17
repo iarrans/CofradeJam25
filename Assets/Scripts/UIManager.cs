@@ -37,7 +37,7 @@ public class UIManager : MonoBehaviour
     {
         Instance = this;
         menuPanel.SetActive(true);
-        MusicManager.instance.PlayBackgroundMusic(MusicManager.instance.musicMenu);
+        MusicManager.instance.PlayBackgroundMusic(MusicManager.instance.musicInGame);
         Time.timeScale = 0f;
     }
 
@@ -124,7 +124,6 @@ public class UIManager : MonoBehaviour
     {
         ActivateInGamePanel(true);
         Time.timeScale = 1f;
-        MusicManager.instance.PlayBackgroundMusic(MusicManager.instance.musicInGame);
     }
     public void GameOver()
     {

@@ -14,7 +14,6 @@ public class MusicManager : MonoBehaviour
     [SerializeField] AudioSource SFXSource;
     [Header("Music")]
     public AudioClip musicInGame;
-    public AudioClip musicMenu;
 
     [Header("SFX")]
     public AudioClip[] damageTerry;
