@@ -153,7 +153,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 1249338131}
+  m_Father: {fileID: 155073850}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -792,6 +792,7 @@ RectTransform:
   - {fileID: 387774802}
   - {fileID: 1276387130}
   - {fileID: 1704153210}
+  - {fileID: 3993751}
   m_Father: {fileID: 1249338131}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -3861,7 +3862,6 @@ RectTransform:
   m_Children:
   - {fileID: 1109624522}
   - {fileID: 155073850}
-  - {fileID: 3993751}
   - {fileID: 2031642072}
   - {fileID: 362360313}
   - {fileID: 1547271749}
@@ -5775,8 +5775,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   musicSource: {fileID: 1482349076}
   SFXSource: {fileID: 1630384918}
-  musicInGame: {fileID: 0}
-  musicMenu: {fileID: 0}
+  musicInGame: {fileID: 8300000, guid: 61bd874a183c2fd4b8ee032f72863677, type: 3}
   damageTerry: []
   deathTerry: []
   audiosCapataz: []
