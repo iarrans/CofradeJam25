@@ -30,13 +30,13 @@ public class PlayerCollissions : MonoBehaviour
                 PlayerControls.Instance.isPlaying = false;
                 PlayerControls.Instance.anim.SetBool("isDead", true);
                 PlayerControls.Instance.speed = 0;
-                MusicManager.instance.TerryDeath();
+                MusicManager.instance.PlaySFX(MusicManager.instance.deathTerry);
                 UIManager.Instance.GameOver();
 
             }
             else
             {
-                MusicManager.instance.TerryDamage();
+                MusicManager.instance.PlaySFX(MusicManager.instance.damageTerry);
             }   
         }
     }

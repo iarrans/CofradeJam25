@@ -49,14 +49,4 @@ public class MusicManager : MonoBehaviour
     {
         SFXSource.PlayOneShot(audiosCapataz[instruction]);
     }
-
-    public void TerryDamage()
-    {
-        PlaySFX(damageTerry);
-    }
-
-    public void TerryDeath()
-    {
-        PlaySFX(deathTerry);
-    }
 }
